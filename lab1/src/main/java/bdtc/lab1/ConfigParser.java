@@ -13,6 +13,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Set;
 
+/**
+ * Парсер файлов конфигурации (зон и температурных интервалов)
+ */
 public class ConfigParser {
 
     public static void readAndSetZones(Path configPath, Configuration conf) {

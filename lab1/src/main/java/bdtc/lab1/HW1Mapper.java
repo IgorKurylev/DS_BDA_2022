@@ -15,6 +15,9 @@ import java.io.StringReader;
 import java.util.ArrayList;
 
 
+/**
+ * Маппер: выдает пары ключ-значение: зона - кол-во кликов
+ */
 public class HW1Mapper extends Mapper<LongWritable, Text, Text, IntWritable> {
 
     private final static IntWritable one = new IntWritable(1);
@@ -28,6 +31,9 @@ public class HW1Mapper extends Mapper<LongWritable, Text, Text, IntWritable> {
         private final static int DATETIME = 3;
     }
 
+    /*
+     * Предварительное чтение координат зон из конфигурации
+     */
     @Override
     public void setup(Context context) {
         Configuration conf = context.getConfiguration();

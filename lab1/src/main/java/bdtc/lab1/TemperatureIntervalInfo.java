@@ -2,6 +2,9 @@ package bdtc.lab1;
 
 import java.util.Objects;
 
+/**
+ * Data-class температурного интервала для сериалиации в JSON
+ */
 public class TemperatureIntervalInfo {
 
     private final String name;

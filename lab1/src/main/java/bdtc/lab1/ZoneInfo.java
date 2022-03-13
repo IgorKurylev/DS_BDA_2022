@@ -3,6 +3,10 @@ package bdtc.lab1;
 import java.awt.*;
 import java.util.Objects;
 
+
+/**
+ * Data-class координат зоны для сериалиации в JSON
+ */
 public class ZoneInfo {
     private final Point startPoint;
     private final Point endPoint;

@@ -10,13 +10,18 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * Редьюсер: суммирует все единицы полученные от {@link HW1Mapper}, выдаёт суммарное количество пользователей по браузерам
+ * Редьюсер: суммирует все единицы полученные от {@link HW1Mapper},
+ * выдаёт суммарное количество событий мыши по каждой зоне с указанием температуры
  */
 public class HW1Reducer extends Reducer<Text, IntWritable, Text, IntWritable> {
 
     private final ArrayList<TemperatureIntervalInfo> temperatureIntervalInfos = new ArrayList<>();
     private final String UNKNOWN_INTERVAL = "unknown_temperature";
 
+
+    /*
+    * Предварительное чтение температурных интервалов из конфигурации
+    */
     @Override
     protected void setup(Reducer<Text, IntWritable, Text, IntWritable>.Context context) throws IOException, InterruptedException {
         Configuration conf = context.getConfiguration();
