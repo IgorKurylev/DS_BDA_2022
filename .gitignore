@@ -53,3 +53,6 @@ Thumbs.db
 lab1/input
 lab1/output
 lab1/target
+
+*/.gradle
+*/build
